@@ -11,7 +11,9 @@ int buzzer = 10; //사운드
 int TxPin = 8; //블루투스
 int RxPin = 9;
 
-int led_1 = 0; //led
+
+
+int led_1 = 0; 
 int led_2 = 1;
 int led_3 = 2;
 int led_4 = 3;
@@ -22,7 +24,7 @@ int led_8 = 7;
 
 int intrrupt = 3;
 
-int octave = 3; //올타브 값 기본초기값 4
+int octave = 3; //올타브 값 기본초기값 3
 
 //음악 음계 
 int music_scale[12][7] = 
@@ -42,7 +44,8 @@ int music_scale[12][7] =
   {58,117,233,466,932,1865,3729} //라샾  11
 };
 
-int Pororo_music[] = 
+//뽀로로 노래 음계 
+int Pororo_music[] =
     {
       4,2,0,\
       1,1,4,4,\
@@ -78,6 +81,7 @@ int Pororo_music[] =
       0,6,0       
     };
 
+//아기상어 노래 음계 
 int baby_shark_music[] = 
 {    
       0,1,3,3,3,3,3,3,3,0,1,3,3,3,3,3,3,0,1,3,3,3,3,3,3,3,3,2,2,\
@@ -86,6 +90,7 @@ int baby_shark_music[] =
       7,8,9,9,9,9,9,9,7,8,9,9,9,9,9,9,7,8,9,9,9,10,10,10 
 };
 
+//작은별 노래 음계 
 int middle_star_music[] =
 {
       0,0,4,4,5,5,4,\
@@ -96,7 +101,7 @@ int middle_star_music[] =
       3,3,2,2,1,1,0      
 };
 
-SoftwareSerial BTSerial(TxPin, RxPin); 
+SoftwareSerial BTSerial(TxPin, RxPin); //블루투스 Tx, Rx
 
 void Pororo_music_function(); //뽀로로 뮤직 함수  
 void baby_shark_music_function(); //아기상어 뮤직 함수  
