@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
-#include <avr/wdt.h>
-#include <TimerOne.h>
+#include <avr/wdt.h> //와치독 (시간체크) 
+#include <TimerOne.h> //타임인터럽트(외부라이브러리)
 
 
 //전역변수 
@@ -149,9 +149,13 @@ void loop()
     char cmd = (char)BTSerial.read();
     char a = cmd;
   
-    if( '1' <= cmd && cmd <= '7')
+    /*
+        ex)아스키코드 '0'은 10진수 48이므로 48-48 = 0
+        2차원 배열 인덱스 0번을 지정할수 있음 
+    */
+    if( '0' <= cmd && cmd <= '6')
     {
-      octave = cmd - 46;
+      octave = cmd - 48;
     }
   
     switch(cmd)
