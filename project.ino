@@ -263,20 +263,20 @@ void loop()
         break;
       }
 
-      case 'n':
+      case 'n': //뽀로로 노래 함수호출
       {
         pororo_music_function();
         break;
       }
 
-      case 'o':
+      case 'o': //작은별 노래 함수호출
       {
         middle_star_music_function();
         break;
       }
       
       
-      case 'p':
+      case 'p': //아기상어 노래 함수호출
       {
         baby_shark_music_function();
         break;
