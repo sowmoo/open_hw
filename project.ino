@@ -158,15 +158,16 @@ void loop()
       octave = cmd - 48;
     }
   
-    switch(cmd)
+    switch(cmd) 
     {
-      case 'a' :
+      case 'a' : //입력된 값 확인 
       {
-        digitalWrite(led_1, HIGH);
-        tone(buzzer, music_scale[0][octave], 250);
-        delay(100);
-        digitalWrite(led_1, LOW);
-        break;
+        digitalWrite(led_1, HIGH); //LED제어 (켜짐)
+        tone(buzzer, music_scale[0][octave], 250); 
+        //    부저 , 옥타브 표 y = 음계 x = 옥타브 ,  부저 지속시간
+        delay(100); //딜레이
+        digitalWrite(led_1, LOW); //LED제어 (꺼짐)
+        break; //switch문 종료 
       }
 
       case 'b' :
