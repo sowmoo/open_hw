@@ -6,7 +6,7 @@
  */
 
 #include <SoftwareSerial.h>
-#include <avr/wdt.h> //와치독 (시간체크) 
+#include <avr/wdt.h> // 아두이노 리셋 (와치독)
 #include <TimerOne.h> //타임인터럽트(외부라이브러리)
 
 /*
